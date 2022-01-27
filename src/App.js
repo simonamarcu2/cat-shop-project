@@ -2,6 +2,7 @@ import { useState, React } from "react";
 import "./App.css";
 // import randomWords from './components/faker'
 import { name, commerce } from "faker";
+import Card from "./components/Card";
 
 function App() {
   //states
@@ -34,7 +35,13 @@ function App() {
     handleFetch();
     console.log(CPOs);
   }
-  return <div className="container"> </div>;
+  return (
+    <div className="container">
+      {CPOs.map((element, index) => {
+        return <Card CPO={element} index={index} />;
+      })}
+    </div>
+  );
 }
 
 export default App;
