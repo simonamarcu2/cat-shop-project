@@ -1,6 +1,9 @@
-const Card = ({ CPO, index }) => {
+const Card = ({ CPO, index, setCPOs, array }) => {
 
-    
+    // const handleBasketSelection = (index, CPO, setCPO) => {
+    //     const tempArray =
+    // }
+
     return (
         <div className="catCard">
         <img className="catPhoto" src={CPO.url} alt={"picture of" + CPO.name}></img>

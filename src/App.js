@@ -37,9 +37,13 @@ function App() {
   }
   return (
     <div className="container">
-      {CPOs.map((element, index) => {
-        return <Card CPO={element} index={index} />;
-      })}
+      <div id="cats">
+        {CPOs.map((element, index) => {
+          return (
+            <Card CPO={element} index={index} setCPOs={setCPOs} array={CPOs} />
+          );
+        })}
+      </div>
     </div>
   );
 }

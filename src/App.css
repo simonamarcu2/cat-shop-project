@@ -1,0 +1,15 @@
+.catCard {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.catPhoto {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+#cats {
+  display: flex;
+  flex-wrap: wrap;
+}
