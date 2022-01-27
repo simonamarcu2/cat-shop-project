@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, React } from "react";
+import "./App.css";
+// import randomWords from './components/faker'
+import { name, commerce } from "faker";
+import Card from "./components/Card";
 
 function App() {
+  //states
+  const [CPOs, setCPOs] = useState([]); //the big list of cats
+  const [hasLoaded, setHasLoaded] = useState(false); //have we got a list yet?
+
+  const handleFetch = async () => {
+    try {
+      let response = await fetch(
+        "https://api.thecatapi.com/v1/images/search?limit=20"
+      );
+      let data = await response.json();
+      let updatedData = await addFakeData(data);
+      setCPOs(updatedData);
+      setHasLoaded(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addFakeData = (data) => {
+    for (let i = 0; i < data.length; i++) {
+      const element = data[i];
+      element["name"] = name.firstName();
+      element["price"] = commerce.price();
+    }
+    return data;
+  };
+  if (hasLoaded === false) {
+    handleFetch();
+    console.log(CPOs);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div id="cats">
+        {CPOs.map((element, index) => {
+          return (
+            <Card CPO={element} index={index} setCPOs={setCPOs} array={CPOs} />
+          );
+        })}
+      </div>
     </div>
   );
 }
