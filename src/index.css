@@ -2,14 +2,15 @@
 
 body {
   font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 900;
   margin: 8px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(
     140deg,
-    #e49ccd 0%,
-    #eadedb 50%,
-    #e0eba5 75%
+    #e0b5d3 10%,
+    #75ca9f 40%,
+    #e8eba8 75%
   );
 }
 

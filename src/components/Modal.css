@@ -11,8 +11,25 @@
 }
 
 #modalContent {
-  background-color: white;
+  background-color: rgb(180, 189, 179);
   width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.basketCat {
+  padding: 10px 50px;
+}
+
+#total {
+  margin: 10px;
+  padding: 0px 20px;
+}
+.checkout {
+  margin: 10px;
+  padding: 10px 70px;
+  background-color: rgb(146, 198, 223);
+  font-weight: 900;
 }
 
 .basketCat {
@@ -23,4 +40,35 @@
 
 .basketCatName {
   padding-right: 25px;
+}
+
+.basket {
+  margin: 10px;
+  padding: 10px 70px;
+}
+
+button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #262730;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.52em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 900;
+  color: #262730;
+  text-align: center;
+  transition: all 0.2s;
+  background: linear-gradient(130deg, #e69d68, #eb6284 30.07%, #6bdfe7 76.05%);
+}
+button:hover {
+  color: #000000;
+  background: linear-gradient(130deg, #6bdfe7, #eb6284 30.07%, #e69d68 76.05%);
+}
+@media all and (max-width: 30em) {
+  button {
+    display: block;
+    margin: 0.4em auto;
+  }
 }

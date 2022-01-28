@@ -22,7 +22,7 @@ const Modal = ({ CPOs, getBasketTotal, show, closeModal }) => {
             })}
           </div>
           <div id="total">Total: {total}</div>
-          <button
+          <button className="checkout"
             onClick={() => {
               closeModal(!show);
             }}
