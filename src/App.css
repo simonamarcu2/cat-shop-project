@@ -13,3 +13,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.isSelected {
+  background-color: blue; /*testing, will remove*/
+}
