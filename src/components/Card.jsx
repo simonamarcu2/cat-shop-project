@@ -6,9 +6,13 @@ const Card = ({ CPO, index, setCPOs, array }) => {
 
     return (
         <div className="catCard">
-        <img className="catPhoto" src={CPO.url} alt={"picture of" + CPO.name}></img>
-        <div className="catName">{CPO.name}</div>
-        <div className="catPrice">{CPO.price}</div>
+            <div className="background">
+                <img className="catPhoto" src={CPO.url} alt={"picture of" + CPO.name}></img>
+            </div>
+            <div className="namePrice">
+                <div className="catName">{CPO.name}</div>
+                <div className="catPrice">{CPO.price}</div>
+            </div>
         </div>)
 }
 

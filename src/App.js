@@ -34,9 +34,14 @@ function App() {
   if (hasLoaded === false) {
     handleFetch();
     console.log(CPOs);
-  }
+  };
+
+
   return (
     <div className="container">
+      <div className="header">
+        <h1>Cat Shop</h1>
+      </div>
       <div id="cats">
         {CPOs.map((element, index) => {
           return (
