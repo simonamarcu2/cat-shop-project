@@ -62,6 +62,7 @@ function App() {
   return (
     <div className="container">
       <ModalAndButton CPOs={CPOs} getBasketTotal={getBasketTotal} />
+
       <div id="cats">
         {CPOs.map((element, index) => {
           return (
