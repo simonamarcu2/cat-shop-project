@@ -3,6 +3,7 @@ import "./App.css";
 // import randomWords from './components/faker'
 import { name, commerce } from "faker";
 import Card from "./components/Card";
+import ModalAndButton from "./components/modalAndButton";
 
 function App() {
   //states
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <div className="container">
+      <ModalAndButton CPOs={CPOs} />
       <div id="cats">
         {CPOs.map((element, index) => {
           return (
