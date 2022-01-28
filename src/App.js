@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className="container">
-      <div id="total">{total}</div> {//this is also to appease Netlify, and will be deleted}
+      <div id="total">{total}</div> {//this is also to appease Netlify, and will be deleted}}
       <div id="cats">
         {CPOs.map((element, index) => {
           return (
