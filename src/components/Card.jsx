@@ -2,6 +2,9 @@ import React from "react";
 
 const Card = ({ CPO, index, handleBasketSelection, array }) => {
   let selectedClass = array[index].selected ? "isSelected" : "notSelected";
+  let buttonText = array[index].selected
+    ? "Remove from Basket"
+    : "Add to Basket";
   return (
     <div className={selectedClass + " catCard"} key={"catCard" + index}>
       <img
@@ -16,7 +19,7 @@ const Card = ({ CPO, index, handleBasketSelection, array }) => {
           handleBasketSelection(array, index);
         }}
       >
-        Basket
+        {buttonText}
       </button>
     </div>
   );
