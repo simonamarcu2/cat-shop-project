@@ -3,8 +3,9 @@
 
 import { useState } from "react";
 import { Modal } from "./Modal";
+import "./Modal.css";
 
-const ModalAndButton = ({ CPOs }) => {
+const ModalAndButton = ({ CPOs, getBasketTotal }) => {
   //states
   const [modalShowing, setModalShowing] = useState(false);
 
@@ -17,7 +18,12 @@ const ModalAndButton = ({ CPOs }) => {
       >
         press me
       </button>
-      <Modal CPOs={CPOs} />
+      <Modal
+        CPOs={CPOs}
+        getBasketTotal={getBasketTotal}
+        show={modalShowing}
+        closeModal={setModalShowing}
+      />
     </div>
   );
 };
