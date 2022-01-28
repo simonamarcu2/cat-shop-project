@@ -46,8 +46,24 @@ function App() {
     setCPOs(newArray);
   };
 
+  const getBasketTotal = () => {
+    console.log(CPOs.length);
+    let total = 0;
+    for (let i = 0; i < CPOs.length; i++) {
+      if (CPOs[i].selected === true) {
+        console.log("true");
+        total += parseInt(CPOs[i].price);
+      }
+    }
+    return total;
+  };
+
+  let total = getBasketTotal(); // this is just so Netlify doesn't freak out, we can delete later
+
   return (
     <div className="container">
+      <div id="total">{total}</div>{" "}
+      {/*this is also to appease Netlify, and will be deleted*/}
       <div id="cats">
         {CPOs.map((element, index) => {
           return (
