@@ -11,7 +11,7 @@ const ModalAndButton = ({ CPOs, getBasketTotal }) => {
 
   return (
     <div id="basketWrapper">
-      <button
+      <button className="basket"
         onClick={() => {
           setModalShowing(!modalShowing);
         }}
